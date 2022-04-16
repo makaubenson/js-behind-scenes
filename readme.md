@@ -116,3 +116,34 @@
 ## Note: `Executions contexts belonging to arrow functions do not get their own arguments keyword nor do they get their own this keyword.`
 
 - They can only access the arguments and this of the parent execution context.
+
+## The Scope and The Scope Chain
+
+- Scoping means how variables are organized and accessed. Where do variables live or where can we access variables?
+
+### Lexical Scoping
+
+- Scoping is controlled by the placement of functions and blocks in the code. `e.g a function written inside another function is called a nested function and it has access to variables of the parent function.`
+- `Scope` is the space or environment in which certain variable is declared. There is: global scope, function scope, and block scope.
+- `scope of a variable`:- Region of our code where certain varible can be accessed.
+
+## Types of Scopes
+
+### Global Scope
+
+- For top level code
+- Code outside any function or block
+- Variables declared in global scope are accessible everywhere.
+
+### Function Scope
+
+- Varibles declared are only accessible inside function.
+- Also called local scope.
+
+### Block Scope
+
+- Variables declared inside a block are only accessible inside that block.
+- This only applies to `let` and `const` keywords.
+- Functions are also block scoped.(Only in strict mode)
+- e.g `if` statement is a block scope.
+- Functions declared inside block are only accessible inside that block.
