@@ -89,3 +89,30 @@
 - Without engine there is no js runtime although js engine is not enough since we need access to web apis. WEB APIs are functionalities provided to the engine.
 - Functionalities provided to the engine are accessible through the window object.
 - A typical js runtime also containes a `callback queue` -contains all the callback functions that are waiting to be executed.
+
+## Execution Contexts and The Call Stack
+
+- After compiling:
+- Global execution context is created for top level code. Top level code is one not inside any function.
+- Code inside functions will be written however code inside the will be executed once the functions are called.
+- Execution of top level code happens inside global execution context
+- Execution of functions takes place. For every function call, new execution context containing all the info necessary to run that exactly function.
+
+### Whats inside execution context?
+
+#### Variable Environment.
+
+- All variables and function declarations are stored here.
+
+#### Scope Chain
+
+- consists of references to variables located outside of the current function.
+- Stored in each execution context.
+
+#### This Keyword
+
+- The value of this is the object that is currently being executed.
+
+## Note: `Executions contexts belonging to arrow functions do not get their own arguments keyword nor do they get their own this keyword.`
+
+- They can only access the arguments and this of the parent execution context.
