@@ -55,3 +55,37 @@
 #### How do we achieve that?
 
 - By using an event loop. It takes long running tasks, executes them in the background and puts them in the main thread one they are finished.
+
+## The Javascript Engine and Runtime
+
+- `Js engine` is a comp program that executes js code.
+- Each browser has its own js engine, however Google's V8 engine is the most popular.
+- V8 engine powers chrome and also node.js.
+- Each js engine has a callstack and a heap.
+- `Callstack` is where our code is executed using an execution context.
+- `Heap` is an unstructured memory pool that stores all the objects that applications needs.
+
+### How code is complied to machine code
+
+- Comps understand 0s and 1s.
+
+- Compilation - Entire code is converted into machine code at once and written to a binary file that can be executed by a comp.
+- Interpretation: Interpreter runs through the source code and executes it line by line.
+- Modern Js is not any longer interpreted, it now uses both interpretation and compilation. It is called Just In Time Compilation.
+- It converts entire code into machine code at once, then executed immediately.
+
+## Js Code Processing
+
+- `As js code enters the js engine, it is first`:
+- Parsed / Read The code: - The code is parse to an abstract data structure called `abstract syntax tree` (AST).
+- Compiled / Translated The code: - The AST is translated into machine code.
+- Executed / Executed The code: - The machine code is executed in the callstack.
+
+## The Javascript Runtime
+
+- The most common javascript runtime is the browser.
+- Its a container including all the things that we need to use javascript(in this case in the browser).
+- In the heart of every js runtime is is the `js engine`.
+- Without engine there is no js runtime although js engine is not enough since we need access to web apis. WEB APIs are functionalities provided to the engine.
+- Functionalities provided to the engine are accessible through the window object.
+- A typical js runtime also containes a `callback queue` -contains all the callback functions that are waiting to be executed.
