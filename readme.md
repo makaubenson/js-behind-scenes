@@ -147,3 +147,6 @@
 - Functions are also block scoped.(Only in strict mode)
 - e.g `if` statement is a block scope.
 - Functions declared inside block are only accessible inside that block.
+- SCOPE CHAIN uses variable lookup to find variables needed.
+- Scope cannot look down.
+- Variables declared with `var` are NOT `block scoped` rather they are `function scoped`.
