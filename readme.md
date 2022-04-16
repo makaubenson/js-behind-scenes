@@ -150,3 +150,4 @@
 - SCOPE CHAIN uses variable lookup to find variables needed.
 - Scope cannot look down.
 - Variables declared with `var` are NOT `block scoped` rather they are `function scoped`.
+- When a variable is not in the current scope,, the engine looks up the scope chain to until it finds the variable it is looking for. This is called variable lookup.
