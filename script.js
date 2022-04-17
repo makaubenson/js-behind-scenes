@@ -34,7 +34,7 @@ function calcAge(birthYear) {
 
 const firstName = 'Benson';
 calcAge(1991);
-*/
+
 //Hoisting and TDZ in practice
 
 // Variables hoisting
@@ -68,3 +68,16 @@ const addExpr = function (a, b) {
 //   return a + b;
 // };
 const addArrow = (a, b) => a + b;
+*/
+//Example
+// How the program should work: if there are no products,
+// then the deleteShorpiingCart function will be executed.
+
+console.log(`The value of of numProduct is ${numProduct}`);
+// For this case, since value of numProduct is undefined,
+// it triggers the execution of deleteShppingCart function below.
+if (numProduct) deleteShoppingCart();
+var numProduct = 10;
+function deleteShoppingCart() {
+  console.log('All products deleted.');
+}
