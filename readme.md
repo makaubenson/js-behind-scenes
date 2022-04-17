@@ -197,7 +197,9 @@
 
 #### ways of calling a function
 
-##### As a `method`. i.e is, as a function attached to an object. `this` points to the object that is calling the method.(points to the object in which the method is called).
+##### As a `method`.
+
+- i.e is, as a function attached to an object. `this` points to the object that is calling the method.(points to the object in which the method is called).
 
 - e.g
 - const benson = {
