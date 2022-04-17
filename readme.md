@@ -151,3 +151,19 @@
 - Scope cannot look down.
 - Variables declared with `var` are NOT `block scoped` rather they are `function scoped`.
 - When a variable is not in the current scope,, the engine looks up the scope chain to until it finds the variable it is looking for. This is called variable lookup.
+
+### Hoisting
+
+- JavaScript Hoisting refers to the process whereby the interpreter appears to move the declaration of functions, variables or classes to the top of their scope, prior to execution of the code.
+- Hoisting makes some types of variables accessible and usable in the code before they are actually declared. `Variables lifted to the top of their scope`
+
+#### What Happens
+
+- The code is ussualy scanned for variable declarations and for each variable, a new property is created in the variable environment object.
+
+### How Hoisting Works.
+
+- Function declarations are capable of being hoisted and their initial value is ussualy set to the actualfunction.`functions are ussualy blocked scoped in strict mode`. This implies `we can use function declarations before they are actually declared in the code`. Because they are stored in the variable environment object before code is executed.
+- var variables are hoisted.Their initial value is `undefined`. Var variables rea function scoped.
+- Let and const variables are not hoisted.Initial value is uninitialized. `The fact is they are atually hoisted however, their initial value is set to uninitialized which implies that they cant be used.` They are actually placed in a `Temporal Dead Zone (TDZ). This means that, we can access the variables between beggining of the scope and where the variables are declared.Let and const are block scoped.
+- The hoisting of Function expressions and arrow functions depends on if they were created using var, let or const. They behave as variables in regard to hoisting.

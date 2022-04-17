@@ -33,3 +33,4 @@ function calcAge(birthYear) {
 
 const firstName = 'Benson';
 calcAge(1991);
+//Hoisting
