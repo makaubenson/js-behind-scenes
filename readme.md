@@ -185,3 +185,5 @@
 
 - Helps minimize the chances of getting bugs in code.
 - To make const variables work the way they are supposed to. eg we cant reassign const variables thus we cannot have a value as first `undefined` then define it later which is how hoisting really works.
+- The only function that works before declaring is `function declaration`.
+  .

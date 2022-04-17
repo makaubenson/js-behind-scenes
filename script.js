@@ -38,10 +38,33 @@ calcAge(1991);
 //Hoisting and TDZ in practice
 
 // Variables hoisting
-console.log(me); // Variables declared with var are hoisted but with the initial value of undefined.
+//console.log(me); // Variables declared with var are hoisted but with the initial value of undefined.
 // console.log(job); // We cant access job before it is initialized. JOB variable is till at TDZ
 // console.log(year); //We cant access year before it is initialized. year variable is till at TDZ
 
 var me = 'Benson';
 let job = 'Teacher';
 const year = 1991;
+
+// Function Hoisting
+
+//Using functions before they are declared
+console.log(addDecl(2, 3)); // Function Declaration : output -> 5
+console.log(addExpr(5, 5)); //Uncaught ReferenceError: Cannot access 'addExpr' before initialization
+console.log(addArrow(3, 3)); //Uncaught ReferenceError: Cannot access 'addArrow' before initialization
+//Function Declaration
+function addDecl(a, b) {
+  return a + b;
+}
+
+//Function Expression
+const addExpr = function (a, b) {
+  return a + b;
+};
+
+//Arrow Function
+
+// const addArrow = (a, b) => {
+//   return a + b;
+// };
+const addArrow = (a, b) => a + b;
