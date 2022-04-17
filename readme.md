@@ -167,3 +167,20 @@
 - var variables are hoisted.Their initial value is `undefined`. Var variables rea function scoped.
 - Let and const variables are not hoisted.Initial value is uninitialized. `The fact is they are atually hoisted however, their initial value is set to uninitialized which implies that they cant be used.` They are actually placed in a `Temporal Dead Zone (TDZ). This means that, we can access the variables between beggining of the scope and where the variables are declared.Let and const are block scoped.
 - The hoisting of Function expressions and arrow functions depends on if they were created using var, let or const. They behave as variables in regard to hoisting.
+
+## Temporal Dead Zone
+
+- Lets look at the variable `job`
+- const myName = 'Jonas';
+- if(myName === 'Jonas'){
+  - console.log(`Jonas is a ${job}`)//Cant access job before it is initialized
+  - const age = 2037 -1989;
+  - console.log(age);
+    // Above job declaration is a temporal dead zone thus it cant be accessed.
+  - const job = 'teacher'; // Scoped to the if block.
+  - console.log(x);// x is not defined.
+  - }
+
+### Why have a Temporal Dead Zone
+
+- Helps minimize the chances of getting bugs in code.
