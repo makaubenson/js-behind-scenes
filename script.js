@@ -68,7 +68,7 @@ const addExpr = function (a, b) {
 //   return a + b;
 // };
 const addArrow = (a, b) => a + b;
-*/
+
 //Example
 // How the program should work: if there are no products,
 // then the deleteShorpiingCart function will be executed.
@@ -81,3 +81,15 @@ var numProduct = 10;
 function deleteShoppingCart() {
   console.log('All products deleted.');
 }
+
+
+//Example 2
+
+var x = 1; // creates properties on the window object
+console.log(x === window.x); //returns true
+let y = 2;
+console.log(y === window.y); //returns false
+const z = 3;
+console.log(z === window.z); //returns false
+//Let and const do not create properties on the global window object.
+*/
