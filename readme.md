@@ -221,4 +221,4 @@
 
 ##### As an event listener
 
-- This keyword will always point to the DOM lement the handler is attached to.
+- This keyword will always point to the DOM element the handler is attached to.
