@@ -188,3 +188,35 @@
 - The only function that works before declaring is `function declaration`.
 - NOTE: To avoid hoisting issues by not declaring variables with `var` instead use `const` and `let`.
 - Always declare functions before using them.
+
+### This Keyword
+
+- Its a special variable created for every execution context.(every function). It takes the value of(points to) the owners of the function in which the this keyword is used.
+- It points to the owner of that function.
+- Value of this keyword is not static.Its value is only assigned when the function is actually called.
+
+#### ways of calling a function
+
+##### As a `method`. i.e is, as a function attached to an object. `this` points to the object that is calling the method.(points to the object in which the method is called).
+
+- e.g
+- const benson = {
+  name : 'Benson',
+  year:1989,
+  calcAge: function(){
+  return 2037 - this.year;
+  }
+  };
+  benson.calcAge();
+
+##### As normal functions (simple function call)
+
+- This keyword will be undefined in strcit mode.
+
+##### As arrow functions
+
+- They dont get their own this keyword. If you use `this` variable it will be `this keyword` of the parent function. This is called lexical keyword because of its behavior of picking up from lexical scope of the arrow functions.
+
+##### As an event listener
+
+- This keyword will always point to the DOM lement the handler is attached to.

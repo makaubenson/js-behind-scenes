@@ -82,9 +82,7 @@ function deleteShoppingCart() {
   console.log('All products deleted.');
 }
 
-
 //Example 2
-
 var x = 1; // creates properties on the window object
 console.log(x === window.x); //returns true
 let y = 2;
@@ -93,3 +91,5 @@ const z = 3;
 console.log(z === window.z); //returns false
 //Let and const do not create properties on the global window object.
 */
+
+//This Keyword
