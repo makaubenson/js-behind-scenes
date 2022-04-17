@@ -171,9 +171,9 @@
 ## Temporal Dead Zone
 
 - Lets look at the variable `job`
-- const myName = 'Jonas';
-- if(myName === 'Jonas'){
-  - console.log(`Jonas is a ${job}`)//Cant access job before it is initialized
+- const myName = 'Benson';
+- if(myName === 'Benson'){
+  - console.log(`Benson is a ${job}`)//Cant access job before it is initialized
   - const age = 2037 -1989;
   - console.log(age);
     // Above job declaration is a temporal dead zone thus it cant be accessed.

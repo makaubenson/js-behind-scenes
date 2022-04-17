@@ -1,4 +1,5 @@
 'use strict';
+/*
 // function to calculate age
 function calcAge(birthYear) {
   const age = 2037 - birthYear;
@@ -33,4 +34,14 @@ function calcAge(birthYear) {
 
 const firstName = 'Benson';
 calcAge(1991);
-//Hoisting
+*/
+//Hoisting and TDZ in practice
+
+// Variables hoisting
+console.log(me); // Variables declared with var are hoisted but with the initial value of undefined.
+// console.log(job); // We cant access job before it is initialized. JOB variable is till at TDZ
+// console.log(year); //We cant access year before it is initialized. year variable is till at TDZ
+
+var me = 'Benson';
+let job = 'Teacher';
+const year = 1991;
