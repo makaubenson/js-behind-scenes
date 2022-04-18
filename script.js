@@ -93,18 +93,27 @@ console.log(z === window.z); //returns false
 */
 
 //This Keyword
-console.log(this); // Is simply the window object
-const calcAge = function (birthYear) {
-  console.log(2037 - birthYear);
-  console.log(this); //undefined
+// console.log(this); // Is simply the window object
+// const calcAge = function (birthYear) {
+//   console.log(2037 - birthYear);
+//   console.log(this); //undefined
+// };
+
+// calcAge(1991);
+
+// //arrow function's this keyword refers to the parent scope.
+// const calcAgeArrow = birthYear => {
+//   console.log(2037 - birthYear);
+//   console.log(this); //output:  window
+// };
+
+// calcAgeArrow(1980);
+
+const benson = {
+  year: 1991,
+  calcAge: function () {
+    console.log(this);
+    console.log(2037 - this.year);
+  },
 };
-
-calcAge(1991);
-
-//arrow function's this keyword refers to the parent scope.
-const calcAgeArrow = birthYear => {
-  console.log(2037 - birthYear);
-  console.log(this); //output:  window
-};
-
-calcAgeArrow(1980);
+benson.calcAge(); //output: {year: 1991, calcAge: ƒ}
