@@ -253,3 +253,11 @@
 
 - Primitive Types are stored in the call stack. `Stored in execution contexts in which they are declared.`
 - Reference Types are stored in the Heap of the js engine
+
+## Copying Objects
+
+-To copy objects we should use a function called `Object.assign()`. This function merges 2 objects and returns a new one. e.g `const jessicaCopy = Object.assign({}, jessica2);
+jessicaCopy.lastName = 'Davis';
+
+console.log(jessica2);
+console.log(jessicaCopy);`

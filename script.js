@@ -183,7 +183,7 @@ const addArrow = (a, b) => {
   return a + b;
 };
 addArrow(2, 5, 8); // arguments keyword is not defined in arrow functions
-*/
+
 
 //Primitives Vs. Objects (Primitive Vs. Reference Types)
 //Primities are like numbers, strings, booleans etc
@@ -202,3 +202,37 @@ friend.age = 27;
 
 console.log('Friend:', friend); //age:27
 console.log('Me:', me); //age:27 expected 31
+*/
+//Primitives Types
+let lastName = 'Williams';
+let oldLastName = lastName;
+lastName = 'Davis';
+// console.log(lastName);
+// console.log(oldLastName);
+
+// Object Types
+const jessica = {
+  firstName: 'Jessica',
+  lastName: 'Williams',
+  age: 27,
+};
+
+const marriedJessica = jessica;
+marriedJessica.lastName = 'Davis';
+
+// console.log('Before Marriage:', jessica);
+// console.log('After Marriage:', marriedJessica);
+//Both lastnames before mariage and after are the same: Davis
+// marriedJessica = {};
+
+//Copying Objects
+const jessica2 = {
+  firstName: 'Jessica',
+  lastName: 'Williams',
+  age: 27,
+};
+const jessicaCopy = Object.assign({}, jessica2); // Real Copy of the jessica object.New Object was created to the enjines heap
+jessicaCopy.lastName = 'Davis';
+
+console.log(jessica2);
+console.log(jessicaCopy);
