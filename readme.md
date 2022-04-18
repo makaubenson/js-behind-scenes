@@ -218,7 +218,14 @@
 ##### As arrow functions
 
 - They dont get their own this keyword. If you use `this` variable it will be `this keyword` of the parent function. This is called lexical keyword because of its behavior of picking up from lexical scope of the arrow functions.
+- An object IS NOT a block scope
 
 ##### As an event listener
 
 - This keyword will always point to the DOM element the handler is attached to.
+
+##### variables declared using var ususally add them to the global object
+
+##### Never use arrow function as a method
+
+- Regular functions have their own this keyword.

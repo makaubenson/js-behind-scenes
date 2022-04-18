@@ -108,7 +108,7 @@ console.log(z === window.z); //returns false
 // };
 
 // calcAgeArrow(1980);
-*/
+
 const benson = {
   year: 1991,
   calcAge: function () {
@@ -127,3 +127,23 @@ matilda.calcAge(); //gives the correct answer
 
 const f = benson.calcAge;
 f(); // this keyword should be undefined
+*/
+
+//Regular and Arrow Functions
+const benson = {
+  firstName: 'Benson',
+  year: 1991,
+  calcAge: function () {
+    console.log(this);
+    console.log(2037 - this.year);
+  },
+  greet: () => console.log(`Hey ${this.firstName}`),
+
+  salamu: function () {
+    console.log(`Hey ${this.firstName}`);
+  },
+};
+benson.greet(); // hey undefined. This is because arrow functions
+//dont have the this keyword, they infact use the parent's keyword
+// for this case, its the global scope
+benson.salamu();
