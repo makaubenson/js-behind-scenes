@@ -90,7 +90,7 @@ console.log(y === window.y); //returns false
 const z = 3;
 console.log(z === window.z); //returns false
 //Let and const do not create properties on the global window object.
-*/
+
 
 //This Keyword
 // console.log(this); // Is simply the window object
@@ -108,7 +108,7 @@ console.log(z === window.z); //returns false
 // };
 
 // calcAgeArrow(1980);
-
+*/
 const benson = {
   year: 1991,
   calcAge: function () {
@@ -117,3 +117,9 @@ const benson = {
   },
 };
 benson.calcAge(); //output: {year: 1991, calcAge: ƒ}
+
+const matilda = {
+  year: 2017,
+};
+//method borrowing
+matilda.calcAge = benson.calcAge;
