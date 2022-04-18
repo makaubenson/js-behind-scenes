@@ -229,3 +229,5 @@
 ##### Never use arrow function as a method
 
 - Regular functions have their own this keyword.
+- The value of `this keyword` inside a regular function is usually `undefined`.
+- The problem of `this` keyword turning out undefined in regular functions is solved using a `special variable` called `self`. This was a pre ES6 solution. Is very old

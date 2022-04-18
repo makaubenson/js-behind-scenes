@@ -134,16 +134,36 @@ const benson = {
   firstName: 'Benson',
   year: 1991,
   calcAge: function () {
-    console.log(this);
+    // console.log(this);
     console.log(2037 - this.year);
-  },
-  greet: () => console.log(`Hey ${this.firstName}`),
 
-  salamu: function () {
+    //Solution 1
+    // const self = this;
+    // const isMillenial = function () {
+    //   // console.log(this);
+    //   console.log(self);
+    //   // console.log(this.year >= 1981 && this.year <= 1996);
+    //   console.log(self.year >= 1981 && self.year <= 1996);
+    // };
+
+    //Solution 2: use an arrow function since it inherits its this keyword from the parent scope
+    const isMillenial = () => {
+      console.log(this);
+      console.log(this.year >= 1981 && this.year <= 1996);
+    };
+    isMillenial();
+  },
+  greet: () => {
+    console.log(this);
     console.log(`Hey ${this.firstName}`);
   },
+  // salamu: function () {
+  //   console.log(`Hey ${this.firstName}`);
+  // },
 };
 benson.greet(); // hey undefined. This is because arrow functions
 //dont have the this keyword, they infact use the parent's keyword
 // for this case, its the global scope
-benson.salamu();
+
+benson.calcAge();
+// benson.salamu();
