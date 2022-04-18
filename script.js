@@ -123,3 +123,4 @@ const matilda = {
 };
 //method borrowing
 matilda.calcAge = benson.calcAge;
+matilda.calcAge();//gives the correct answer
