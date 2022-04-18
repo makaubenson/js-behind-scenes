@@ -127,7 +127,7 @@ matilda.calcAge(); //gives the correct answer
 
 const f = benson.calcAge;
 f(); // this keyword should be undefined
-*/
+
 
 //Regular and Arrow Functions
 const benson = {
@@ -167,3 +167,12 @@ benson.greet(); // hey undefined. This is because arrow functions
 
 benson.calcAge();
 // benson.salamu();
+*/
+//arguments Keyword
+
+const addExpr = function (a, b) {
+  console.log(arguments);
+  return a + b;
+};
+addExpr(2, 5);
+addExpr(2, 5, 8, 12);
