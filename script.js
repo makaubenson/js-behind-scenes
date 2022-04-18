@@ -167,7 +167,7 @@ benson.greet(); // hey undefined. This is because arrow functions
 
 benson.calcAge();
 // benson.salamu();
-*/
+
 //arguments Keyword
 
 const addExpr = function (a, b) {
@@ -182,4 +182,23 @@ const addArrow = (a, b) => {
   console.log(arguments);
   return a + b;
 };
-addArrow(2, 5, 8);// arguments keyword is not defined in arrow functions
+addArrow(2, 5, 8); // arguments keyword is not defined in arrow functions
+*/
+
+//Primitives Vs. Objects (Primitive Vs. Reference Types)
+//Primities are like numbers, strings, booleans etc
+let age = 30;
+let oldAge = age;
+age = 31;
+console.log(age);
+console.log(oldAge);
+
+const me = {
+  name: 'Benson',
+  age: 30,
+};
+const friend = me;
+friend.age = 27;
+
+console.log('Friend:', friend); //age:27
+console.log('Me:', me); //age:27 expected 31

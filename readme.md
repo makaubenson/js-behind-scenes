@@ -233,3 +233,23 @@
 - The problem of `this` keyword turning out undefined in regular functions is solved using a `special variable` called `self`. This was a pre ES6 solution. Is very old
 
 - `arguments` keyword is only available in regular functions.
+
+## Javascript Objects (REFERENCE TYPES)
+
+- Object Literal -A JavaScript object literal is a comma-separated list of name-value pairs wrapped in curly braces
+- Array
+- Functions
+- ...etc
+
+## Javascript Primitive Datatypes (PRIMITIVE TYPES)
+
+- Number
+- String
+- Boolean
+- Undefined
+- Null
+- Symbol
+- Bigint
+
+- Primitive Types are stored in the call stack. `Stored in execution contexts in which they are declared.`
+- Reference Types are stored in the Heap of the js engine
