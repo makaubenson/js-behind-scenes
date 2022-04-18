@@ -123,4 +123,7 @@ const matilda = {
 };
 //method borrowing
 matilda.calcAge = benson.calcAge;
-matilda.calcAge();//gives the correct answer
+matilda.calcAge(); //gives the correct answer
+
+const f = benson.calcAge;
+f(); // this keyword should be undefined
