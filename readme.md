@@ -261,3 +261,5 @@ jessicaCopy.lastName = 'Davis';
 
 console.log(jessica2);
 console.log(jessicaCopy);`
+
+- Using `Object.assign()` only works on the first level. That is, if we have an object inside another object, inner object will still be the same.

@@ -230,9 +230,15 @@ const jessica2 = {
   firstName: 'Jessica',
   lastName: 'Williams',
   age: 27,
+  family: ['Alice', 'Bob'],
 };
 const jessicaCopy = Object.assign({}, jessica2); // Real Copy of the jessica object.New Object was created to the enjines heap
 jessicaCopy.lastName = 'Davis';
 
-console.log(jessica2);
-console.log(jessicaCopy);
+//Manipulating Object within an object
+jessicaCopy.family.push('Mary');
+jessicaCopy.family.push('John');
+
+console.log('Before Marriage', jessica2);
+console.log('After Marriage', jessicaCopy);
+//Output: Both objects have the family array property despite the fact that we added it on familyCopy only
